@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7th Grade Math Review 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>7th Grade Math Review 2</h1>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="progress-text" id="progressText">0%</span>
+            </div>
+        </div>
+
+        <!-- Topic Navigation -->
+        <div class="topic-nav">
+            <div class="topic-dot active" data-topic="1">1</div>
+            <div class="topic-dot" data-topic="2">2</div>
+            <div class="topic-dot" data-topic="3">3</div>
+            <div class="topic-dot" data-topic="4">4</div>
+            <div class="topic-dot" data-topic="5">5</div>
+            <div class="topic-dot" data-topic="6">R</div>
+        </div>
+
+        <!-- Topic 1: Real Numbers -->
+        <div class="content-card active" id="topic1">
+            <div class="card-header">
+                <div class="card-icon real-numbers">&#x211D;</div>
+                <div>
+                    <div class="card-title">Real Numbers</div>
+                    <div class="card-subtitle">Rational, Irrational & Integers</div>
+                </div>
+            </div>
+
+            <div class="quick-reference">
+                <h3>Quick Reference</h3>
+                <div class="reference-grid">
+                    <div class="reference-box">
+                        <h4>Rational Numbers</h4>
+                        <p>Can be written as a fraction <span class="math">a/b</span> where a and b are integers and b &ne; 0</p>
+                        <ul>
+                            <li>Decimals that terminate: 0.5, 0.25, 3.75</li>
+                            <li>Decimals that repeat: 0.333..., 0.1666...</li>
+                            <li>All integers, fractions, and mixed numbers</li>
+                        </ul>
+                    </div>
+                    <div class="reference-box">
+                        <h4>Irrational Numbers</h4>
+                        <p>CANNOT be written as a fraction - decimals go on forever without repeating</p>
+                        <ul>
+                            <li>&pi; = 3.14159265358979...</li>
+                            <li>&radic;2 = 1.41421356...</li>
+                            <li>&radic;3, &radic;5, &radic;7 (non-perfect square roots)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="key-formulas">
+                    <strong>Key Points:</strong>
+                    <ul>
+                        <li>&radic;n is rational only if n is a <strong>perfect square</strong> (1, 4, 9, 16, 25...)</li>
+                        <li>Rational + Irrational = <strong>Irrational</strong></li>
+                        <li>Rational &times; Irrational = <strong>Irrational</strong> (unless rational = 0)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h3>Practice Questions</h3>
+
+                <div class="question-block" data-question="1-1">
+                    <div class="question-number">1</div>
+                    <div class="question-content">
+                        <p>Which number is rational?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1-1" value="a">
+                                <span>&radic;15</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-1" value="b">
+                                <span>&pi;</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-1" value="c">
+                                <span>&radic;81</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-1" value="d">
+                                <span>&radic;23</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-1-1"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="1-2">
+                    <div class="question-number">2</div>
+                    <div class="question-content">
+                        <p>Between which two consecutive integers does &radic;30 lie?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1-2" value="a">
+                                <span>4 and 5</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-2" value="b">
+                                <span>5 and 6</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-2" value="c">
+                                <span>6 and 7</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-2" value="d">
+                                <span>14 and 16</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-1-2"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="1-3">
+                    <div class="question-number">3</div>
+                    <div class="question-content">
+                        <p>What type of number is the result of 2 &times; &radic;5?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1-3" value="a">
+                                <span>Rational</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-3" value="b">
+                                <span>Irrational</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-3" value="c">
+                                <span>Integer</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-3" value="d">
+                                <span>Whole Number</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-1-3"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="1-4">
+                    <div class="question-number">4</div>
+                    <div class="question-content">
+                        <p>Order these numbers from least to greatest: &radic;26, 5.2, 5.<span class="overline">1</span></p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1-4" value="a">
+                                <span>&radic;26, 5.<span class="overline">1</span>, 5.2</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-4" value="b">
+                                <span>5.<span class="overline">1</span>, &radic;26, 5.2</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-4" value="c">
+                                <span>5.<span class="overline">1</span>, 5.2, &radic;26</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-4" value="d">
+                                <span>5.2, &radic;26, 5.<span class="overline">1</span></span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-1-4"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="1-5">
+                    <div class="question-number">5</div>
+                    <div class="question-content">
+                        <p>Which statement is TRUE about &radic;100/25?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1-5" value="a">
+                                <span>It is irrational because it contains a square root</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-5" value="b">
+                                <span>It is a whole number equal to 2</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-5" value="c">
+                                <span>It is rational but not an integer</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-5" value="d">
+                                <span>It cannot be simplified</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-1-5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <div></div>
+                <button class="nav-btn next" onclick="nextTopic()">
+                    Next Topic <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Topic 2: Laws of Exponents -->
+        <div class="content-card" id="topic2">
+            <div class="card-header">
+                <div class="card-icon exponents">x<sup>n</sup></div>
+                <div>
+                    <div class="card-title">Laws of Exponents</div>
+                    <div class="card-subtitle">Integer & Variable Exponents</div>
+                </div>
+            </div>
+
+            <div class="quick-reference">
+                <h3>Quick Reference</h3>
+                <div class="laws-grid">
+                    <div class="law-box">
+                        <div class="law-name">Product Rule</div>
+                        <div class="law-formula">x<sup>a</sup> &middot; x<sup>b</sup> = x<sup>a+b</sup></div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">Quotient Rule</div>
+                        <div class="law-formula">x<sup>a</sup> &divide; x<sup>b</sup> = x<sup>a-b</sup></div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">Power Rule</div>
+                        <div class="law-formula">(x<sup>a</sup>)<sup>b</sup> = x<sup>a&middot;b</sup></div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">Zero Exponent</div>
+                        <div class="law-formula">x<sup>0</sup> = 1 (x &ne; 0)</div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">Negative Exponent</div>
+                        <div class="law-formula">x<sup>-a</sup> = 1/x<sup>a</sup></div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">Product to Power</div>
+                        <div class="law-formula">(xy)<sup>a</sup> = x<sup>a</sup>y<sup>a</sup></div>
+                    </div>
+                </div>
+                <div class="key-formulas">
+                    <strong>Remember:</strong> When multiplying same bases, ADD exponents. When dividing, SUBTRACT. When raising a power to a power, MULTIPLY.
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h3>Practice Questions</h3>
+
+                <div class="question-block" data-question="2-1">
+                    <div class="question-number">1</div>
+                    <div class="question-content">
+                        <p>Simplify: y<sup>4</sup> &middot; y<sup>6</sup></p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2-1" value="a">
+                                <span>y<sup>24</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-1" value="b">
+                                <span>y<sup>10</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-1" value="c">
+                                <span>y<sup>2</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-1" value="d">
+                                <span>2y<sup>10</sup></span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-2-1"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="2-2">
+                    <div class="question-number">2</div>
+                    <div class="question-content">
+                        <p>Simplify: (3x<sup>2</sup>)<sup>3</sup></p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2-2" value="a">
+                                <span>3x<sup>6</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-2" value="b">
+                                <span>9x<sup>6</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-2" value="c">
+                                <span>27x<sup>6</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-2" value="d">
+                                <span>27x<sup>5</sup></span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-2-2"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="2-3">
+                    <div class="question-number">3</div>
+                    <div class="question-content">
+                        <p>Simplify: b<sup>9</sup> &divide; b<sup>3</sup></p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2-3" value="a">
+                                <span>b<sup>27</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-3" value="b">
+                                <span>b<sup>6</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-3" value="c">
+                                <span>b<sup>12</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-3" value="d">
+                                <span>b<sup>3</sup></span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-2-3"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="2-4">
+                    <div class="question-number">4</div>
+                    <div class="question-content">
+                        <p>Simplify: 7n<sup>-3</sup></p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2-4" value="a">
+                                <span>-21n</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-4" value="b">
+                                <span>1/(7n<sup>3</sup>)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-4" value="c">
+                                <span>7/n<sup>3</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-4" value="d">
+                                <span>n<sup>3</sup>/7</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-2-4"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="2-5">
+                    <div class="question-number">5</div>
+                    <div class="question-content">
+                        <p>Simplify: (2a<sup>3</sup>b)<sup>2</sup> &divide; (ab)<sup>2</sup></p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2-5" value="a">
+                                <span>4a<sup>4</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-5" value="b">
+                                <span>2a<sup>4</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-5" value="c">
+                                <span>4a<sup>6</sup>b<sup>2</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-5" value="d">
+                                <span>4a<sup>4</sup>b</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-2-5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn prev" onclick="prevTopic()">
+                    <span>&larr;</span> Back
+                </button>
+                <button class="nav-btn next" onclick="nextTopic()">
+                    Next Topic <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Topic 3: Scientific Notation & Radicals -->
+        <div class="content-card" id="topic3">
+            <div class="card-header">
+                <div class="card-icon scientific">10<sup>n</sup></div>
+                <div>
+                    <div class="card-title">Scientific Notation & Radicals</div>
+                    <div class="card-subtitle">Operations with Scientific Notation & Order of Operations with Radicals</div>
+                </div>
+            </div>
+
+            <div class="quick-reference">
+                <h3>Quick Reference</h3>
+                <div class="reference-grid">
+                    <div class="reference-box">
+                        <h4>Scientific Notation</h4>
+                        <p>Form: a &times; 10<sup>n</sup> where 1 &le; |a| < 10</p>
+                        <ul>
+                            <li><strong>Large numbers:</strong> Positive exponent (3,400,000 = 3.4 &times; 10<sup>6</sup>)</li>
+                            <li><strong>Small numbers:</strong> Negative exponent (0.00056 = 5.6 &times; 10<sup>-4</sup>)</li>
+                            <li><strong>Multiply:</strong> Multiply coefficients, add exponents</li>
+                            <li><strong>Divide:</strong> Divide coefficients, subtract exponents</li>
+                        </ul>
+                    </div>
+                    <div class="reference-box">
+                        <h4>Order of Operations with Radicals</h4>
+                        <p>PEMDAS still applies - treat radicals like parentheses</p>
+                        <ul>
+                            <li>Simplify inside radical first</li>
+                            <li>&radic;(a&middot;b) = &radic;a &middot; &radic;b</li>
+                            <li>&radic;(a/b) = &radic;a / &radic;b</li>
+                            <li>&radic;a<sup>2</sup> = |a|</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="key-formulas">
+                    <strong>Common Perfect Squares:</strong> 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h3>Practice Questions</h3>
+
+                <div class="question-block" data-question="3-1">
+                    <div class="question-number">1</div>
+                    <div class="question-content">
+                        <p>Write 0.00000389 in scientific notation.</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3-1" value="a">
+                                <span>3.89 &times; 10<sup>6</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-1" value="b">
+                                <span>3.89 &times; 10<sup>-6</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-1" value="c">
+                                <span>38.9 &times; 10<sup>-7</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-1" value="d">
+                                <span>0.389 &times; 10<sup>-5</sup></span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-3-1"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="3-2">
+                    <div class="question-number">2</div>
+                    <div class="question-content">
+                        <p>Calculate: (6 &times; 10<sup>3</sup>) &times; (5 &times; 10<sup>4</sup>)</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3-2" value="a">
+                                <span>3 &times; 10<sup>8</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-2" value="b">
+                                <span>30 &times; 10<sup>7</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-2" value="c">
+                                <span>11 &times; 10<sup>7</sup></span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-2" value="d">
+                                <span>3 &times; 10<sup>12</sup></span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-3-2"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="3-3">
+                    <div class="question-number">3</div>
+                    <div class="question-content">
+                        <p>Simplify: &radic;98</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3-3" value="a">
+                                <span>7&radic;2</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-3" value="b">
+                                <span>49&radic;2</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-3" value="c">
+                                <span>2&radic;49</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-3" value="d">
+                                <span>14&radic;7</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-3-3"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="3-4">
+                    <div class="question-number">4</div>
+                    <div class="question-content">
+                        <p>Evaluate: 10 - 3&radic;9 + 2</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3-4" value="a">
+                                <span>3</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-4" value="b">
+                                <span>21</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-4" value="c">
+                                <span>9</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-4" value="d">
+                                <span>-1</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-3-4"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="3-5">
+                    <div class="question-number">5</div>
+                    <div class="question-content">
+                        <p>A cell is 8 &times; 10<sup>-5</sup> meters wide. A molecule is 2 &times; 10<sup>-9</sup> meters wide. How many times wider is the cell than the molecule?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3-5" value="a">
+                                <span>4 times</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-5" value="b">
+                                <span>400 times</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-5" value="c">
+                                <span>4,000 times</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-5" value="d">
+                                <span>40,000 times</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-3-5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn prev" onclick="prevTopic()">
+                    <span>&larr;</span> Back
+                </button>
+                <button class="nav-btn next" onclick="nextTopic()">
+                    Next Topic <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Topic 4: Equivalent Expressions -->
+        <div class="content-card" id="topic4">
+            <div class="card-header">
+                <div class="card-icon expressions">=</div>
+                <div>
+                    <div class="card-title">Equivalent Expressions</div>
+                    <div class="card-subtitle">Factoring & Multiplying Linear Expressions</div>
+                </div>
+            </div>
+
+            <div class="quick-reference">
+                <h3>Quick Reference</h3>
+                <div class="reference-grid">
+                    <div class="reference-box">
+                        <h4>Factoring Common Monomials</h4>
+                        <p>Find the GCF of all terms and factor it out</p>
+                        <ul>
+                            <li>6x + 9 = <strong>3</strong>(2x + 3)</li>
+                            <li>4x<sup>2</sup> - 8x = <strong>4x</strong>(x - 2)</li>
+                            <li>15xy + 10y = <strong>5y</strong>(3x + 2)</li>
+                        </ul>
+                    </div>
+                    <div class="reference-box">
+                        <h4>Multiplying Linear Expressions</h4>
+                        <p>Use the distributive property (FOIL for binomials)</p>
+                        <ul>
+                            <li>a(b + c) = ab + ac</li>
+                            <li>(x + 2)(x + 3) = x<sup>2</sup> + 5x + 6</li>
+                            <li>Combine like terms at the end</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="key-formulas">
+                    <strong>FOIL:</strong> First, Outer, Inner, Last - then combine like terms
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h3>Practice Questions</h3>
+
+                <div class="question-block" data-question="4-1">
+                    <div class="question-number">1</div>
+                    <div class="question-content">
+                        <p>Factor completely: 15x + 25</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q4-1" value="a">
+                                <span>5(3x + 5)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-1" value="b">
+                                <span>3(5x + 8)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-1" value="c">
+                                <span>15(x + 1.67)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-1" value="d">
+                                <span>5(3x + 25)</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-4-1"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="4-2">
+                    <div class="question-number">2</div>
+                    <div class="question-content">
+                        <p>Factor: 6a<sup>2</sup>b - 9ab<sup>2</sup></p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q4-2" value="a">
+                                <span>3ab(2a - 3b)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-2" value="b">
+                                <span>3(2a<sup>2</sup>b - 3ab<sup>2</sup>)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-2" value="c">
+                                <span>ab(6a - 9b)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-2" value="d">
+                                <span>6ab(a - 1.5b)</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-4-2"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="4-3">
+                    <div class="question-number">3</div>
+                    <div class="question-content">
+                        <p>Expand: (x + 5)(x - 2)</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q4-3" value="a">
+                                <span>x<sup>2</sup> + 3x - 10</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-3" value="b">
+                                <span>x<sup>2</sup> - 3x - 10</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-3" value="c">
+                                <span>x<sup>2</sup> + 7x - 10</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-3" value="d">
+                                <span>x<sup>2</sup> - 10</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-4-3"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="4-4">
+                    <div class="question-number">4</div>
+                    <div class="question-content">
+                        <p>Expand and simplify: 2(4x - 3) + 5(x + 1)</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q4-4" value="a">
+                                <span>13x - 1</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-4" value="b">
+                                <span>13x + 2</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-4" value="c">
+                                <span>13x - 8</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-4" value="d">
+                                <span>9x - 1</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-4-4"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="4-5">
+                    <div class="question-number">5</div>
+                    <div class="question-content">
+                        <p>Which expression is equivalent to (3x - 2)(x + 4)?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q4-5" value="a">
+                                <span>3x<sup>2</sup> + 10x - 8</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-5" value="b">
+                                <span>3x<sup>2</sup> - 10x - 8</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-5" value="c">
+                                <span>3x<sup>2</sup> + 12x - 8</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-5" value="d">
+                                <span>3x<sup>2</sup> + 10x + 8</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-4-5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn prev" onclick="prevTopic()">
+                    <span>&larr;</span> Back
+                </button>
+                <button class="nav-btn next" onclick="nextTopic()">
+                    Next Topic <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Topic 5: Equations & Inequalities -->
+        <div class="content-card" id="topic5">
+            <div class="card-header">
+                <div class="card-icon equations">&ge;</div>
+                <div>
+                    <div class="card-title">Equations & Inequalities</div>
+                    <div class="card-subtitle">Linear Equations, Inequalities, Quadratic & Cubic Equations</div>
+                </div>
+            </div>
+
+            <div class="quick-reference">
+                <h3>Quick Reference</h3>
+                <div class="reference-grid">
+                    <div class="reference-box">
+                        <h4>Multi-Step Linear Equations</h4>
+                        <ul>
+                            <li><strong>One Solution:</strong> Variable equals one value (x = 5)</li>
+                            <li><strong>No Solution:</strong> Variables cancel, false statement (0 = 3)</li>
+                            <li><strong>Infinite Solutions:</strong> Variables cancel, true statement (0 = 0)</li>
+                        </ul>
+                    </div>
+                    <div class="reference-box">
+                        <h4>Two-Step Inequalities</h4>
+                        <ul>
+                            <li>Solve like equations, but...</li>
+                            <li><strong>FLIP the sign</strong> when multiplying or dividing by a negative!</li>
+                            <li>&lt; means "less than" (open circle)</li>
+                            <li>&le; means "less than or equal" (closed circle)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="reference-grid" style="margin-top: 15px;">
+                    <div class="reference-box full-width">
+                        <h4>Quadratic & Cubic Equations</h4>
+                        <div class="equation-types">
+                            <div><strong>x<sup>2</sup> = p:</strong> x = &plusmn;&radic;p (remember both solutions!)</div>
+                            <div><strong>x<sup>3</sup> = q:</strong> x = <sup>3</sup>&radic;q (only one real solution)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h3>Practice Questions</h3>
+
+                <div class="question-block" data-question="5-1">
+                    <div class="question-number">1</div>
+                    <div class="question-content">
+                        <p>Solve: 4(x + 1) - 2 = 3x + 8</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q5-1" value="a">
+                                <span>x = 6</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-1" value="b">
+                                <span>x = 4</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-1" value="c">
+                                <span>x = 2</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-1" value="d">
+                                <span>x = 10</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-5-1"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="5-2">
+                    <div class="question-number">2</div>
+                    <div class="question-content">
+                        <p>How many solutions does this equation have?<br>3(x - 1) = 3x - 5</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q5-2" value="a">
+                                <span>No solution</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-2" value="b">
+                                <span>One solution</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-2" value="c">
+                                <span>Infinitely many solutions</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-2" value="d">
+                                <span>Two solutions</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-5-2"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="5-3">
+                    <div class="question-number">3</div>
+                    <div class="question-content">
+                        <p>Solve the inequality: -3x - 4 &ge; 8</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q5-3" value="a">
+                                <span>x &ge; -4</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-3" value="b">
+                                <span>x &le; -4</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-3" value="c">
+                                <span>x &ge; 4</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-3" value="d">
+                                <span>x &le; 4</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-5-3"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="5-4">
+                    <div class="question-number">4</div>
+                    <div class="question-content">
+                        <p>Solve: x<sup>2</sup> = 144</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q5-4" value="a">
+                                <span>x = 12</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-4" value="b">
+                                <span>x = -12</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-4" value="c">
+                                <span>x = &plusmn;12</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-4" value="d">
+                                <span>x = 72</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-5-4"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="5-5">
+                    <div class="question-number">5</div>
+                    <div class="question-content">
+                        <p>Solve: x<sup>3</sup> = 64</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q5-5" value="a">
+                                <span>x = 8</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-5" value="b">
+                                <span>x = 4</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-5" value="c">
+                                <span>x = &plusmn;4</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-5" value="d">
+                                <span>x = &plusmn;8</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-5-5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn prev" onclick="prevTopic()">
+                    <span>&larr;</span> Back
+                </button>
+                <button class="nav-btn next" onclick="submitQuiz()">
+                    Submit Review <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Page -->
+        <div class="content-card" id="topic6">
+            <div class="card-header">
+                <div class="card-icon results">&#x2713;</div>
+                <div>
+                    <div class="card-title">Review Results</div>
+                    <div class="card-subtitle">See how you did!</div>
+                </div>
+            </div>
+
+            <div class="results-container">
+                <div class="overall-score">
+                    <div class="score-circle">
+                        <span class="score-number" id="totalScore">0</span>
+                        <span class="score-total">/25</span>
+                    </div>
+                    <div class="score-percent" id="scorePercent">0%</div>
+                </div>
+
+                <div class="topic-scores">
+                    <h3>Score by Topic</h3>
+                    <div class="topic-score-item">
+                        <span class="topic-name">Real Numbers</span>
+                        <div class="topic-bar-container">
+                            <div class="topic-bar" id="bar-topic1"></div>
+                        </div>
+                        <span class="topic-score-text" id="score-topic1">0/5</span>
+                    </div>
+                    <div class="topic-score-item">
+                        <span class="topic-name">Laws of Exponents</span>
+                        <div class="topic-bar-container">
+                            <div class="topic-bar" id="bar-topic2"></div>
+                        </div>
+                        <span class="topic-score-text" id="score-topic2">0/5</span>
+                    </div>
+                    <div class="topic-score-item">
+                        <span class="topic-name">Scientific Notation & Radicals</span>
+                        <div class="topic-bar-container">
+                            <div class="topic-bar" id="bar-topic3"></div>
+                        </div>
+                        <span class="topic-score-text" id="score-topic3">0/5</span>
+                    </div>
+                    <div class="topic-score-item">
+                        <span class="topic-name">Equivalent Expressions</span>
+                        <div class="topic-bar-container">
+                            <div class="topic-bar" id="bar-topic4"></div>
+                        </div>
+                        <span class="topic-score-text" id="score-topic4">0/5</span>
+                    </div>
+                    <div class="topic-score-item">
+                        <span class="topic-name">Equations & Inequalities</span>
+                        <div class="topic-bar-container">
+                            <div class="topic-bar" id="bar-topic5"></div>
+                        </div>
+                        <span class="topic-score-text" id="score-topic5">0/5</span>
+                    </div>
+                </div>
+
+                <div class="recommendations" id="recommendations">
+                    <!-- Populated by JS -->
+                </div>
+
+                <div class="action-buttons">
+                    <button class="action-btn retry" onclick="retryQuiz()">Try Again</button>
+                    <button class="action-btn print" onclick="window.print()">Print Results</button>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn prev" onclick="prevTopic()">
+                    <span>&larr;</span> Review Answers
+                </button>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
