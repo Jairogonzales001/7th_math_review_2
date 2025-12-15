@@ -405,6 +405,13 @@ body {
     border-color: #f44336;
 }
 
+/* Locked/disabled state after answer selection */
+.option.locked {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.85;
+}
+
 /* Feedback */
 .feedback {
     margin-top: 15px;

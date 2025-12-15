@@ -52,6 +52,9 @@ let topicScores = {
 // Track if quiz has been submitted
 let quizSubmitted = false;
 
+// Track which questions have been answered (locked)
+let lockedQuestions = {};
+
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
     // Add click handlers to topic dots
@@ -66,13 +69,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add change handlers to all radio buttons for immediate feedback
-    document.querySelectorAll('input[type="radio"]').forEach(radio => {
-        radio.addEventListener('change', function() {
-            if (!quizSubmitted) {
-                const questionId = this.name.replace('q', '');
-                checkAnswer(questionId, this.value);
+    // Add click handlers to all options for immediate feedback
+    document.querySelectorAll('.option').forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.preventDefault(); // Always prevent default to control radio manually
+            e.stopPropagation();
+
+            const radio = this.querySelector('input[type="radio"]');
+            if (!radio) return;
+
+            const questionId = radio.name.replace('q', '');
+
+            // If this question is already locked, do nothing
+            if (lockedQuestions[questionId]) {
+                return;
             }
+
+            if (!quizSubmitted) {
+                radio.checked = true;
+                checkAnswer(questionId, radio.value);
+                updateProgress();
+            }
+        });
+    });
+
+    // Prevent direct radio button interaction completely
+    document.querySelectorAll('input[type="radio"]').forEach(radio => {
+        ['mousedown', 'click', 'keydown', 'keyup', 'keypress'].forEach(eventType => {
+            radio.addEventListener(eventType, function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            });
         });
     });
 
@@ -117,10 +144,20 @@ function prevTopic() {
 
 // Check individual answer and provide feedback
 function checkAnswer(questionId, selectedValue) {
+    // Mark this question as locked
+    lockedQuestions[questionId] = true;
+
     const answer = answers[questionId];
     const feedbackEl = document.getElementById('feedback-' + questionId);
     const questionBlock = document.querySelector(`[data-question="${questionId}"]`);
     const options = questionBlock.querySelectorAll('.option');
+    const radioButtons = questionBlock.querySelectorAll('input[type="radio"]');
+
+    // Lock all radio buttons for this question after selection
+    radioButtons.forEach(radio => {
+        radio.disabled = true;
+        radio.parentElement.classList.add('locked');
+    });
 
     // Reset option styling
     options.forEach(opt => {
@@ -248,15 +285,18 @@ function submitQuiz() {
 // Retry the quiz
 function retryQuiz() {
     quizSubmitted = false;
+    lockedQuestions = {}; // Reset locked questions
 
     // Reset all scores
     for (let topic = 1; topic <= 5; topic++) {
         topicScores[topic] = 0;
     }
 
-    // Clear all selections and feedback
+    // Clear all selections and feedback, and re-enable radio buttons
     document.querySelectorAll('input[type="radio"]').forEach(radio => {
         radio.checked = false;
+        radio.disabled = false;
+        radio.parentElement.classList.remove('locked');
     });
 
     document.querySelectorAll('.feedback').forEach(feedback => {
@@ -300,7 +340,3 @@ function updateProgress() {
     document.getElementById('progressText').textContent = percentage + '%';
 }
 
-// Add change listener to update progress when answers are selected
-document.querySelectorAll('input[type="radio"]').forEach(radio => {
-    radio.addEventListener('change', updateProgress);
-});
